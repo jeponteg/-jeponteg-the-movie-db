@@ -1,0 +1,29 @@
+.root-details{
+    border-radius: 0px;
+}
+.card-media-details{
+    // height: 90vh;
+    // z-index: 1; 
+}
+.card-contents{
+    padding: 45px;
+    background-image: linear-gradient(to right, rgba(11.76%, 16.47%, 16.08%, 1.00) 150px, rgba(11.76%, 16.47%, 16.08%, 0.84) 100%);
+}
+.card-media-img{
+   height: 80vh;
+   width: auto;
+   border-radius: 5px;
+}
+.grid{
+    background-color: transparent;
+}
+.card-media-title{
+    font-weight: 700;
+    color: white;
+    margin: 30px;
+}
+.card-media-overview{
+    color: white;
+    margin: 30px;
+    text-align: justify;
+}
