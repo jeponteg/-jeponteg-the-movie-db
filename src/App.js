@@ -4,37 +4,34 @@ import VideoContex from "./contexts/VideoContext";
 import DetailsContext from "./contexts/DetailsCardContext";
 import Layout from "./components/layouts/Layout";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect,useLocation } from "react-router-dom";
 import DetailsCard from "./components/Details-card/DetailsCard";
+import PageNotFound from "./components/Movies/NotFound/PageNotFound";
 
 const App = () => {
 
   return (
     <Router>
-      
       <PopularMovieContex>
         <VideoContex>
-          <Layout>
-            <Switch>
-              <Route exact path='/'>
-                <HomeScreen/>
-              </Route>
-
-              <DetailsContext>
+          <DetailsContext>
+            <Layout>
+              <Switch>
+                <Route exact path='/'>
+                  <HomeScreen/>
+                </Route>
                 <Route exact path="/movie-details/:id">
                   <DetailsCard/>
-                </Route>
-              </DetailsContext>
-
-            </Switch>
-          </Layout>
+                </Route> 
+                <Route component={PageNotFound} />
+              </Switch>
+            </Layout>
+          </DetailsContext>
         </VideoContex>
       </PopularMovieContex> 
-      
     </Router>
   );
 }
 
 export default App
-
 
