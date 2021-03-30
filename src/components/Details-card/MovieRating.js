@@ -3,8 +3,7 @@ import Rating from '@material-ui/lab/Rating';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
-const MovieRating = ({voteAverage}) => {
-  
+const MovieRating = ({voteAverage = 0}) => {
   return(
     <Box component="fieldset" mb={3} borderColor="transparent">
       <Typography component="legend">Controlled</Typography>

@@ -28,17 +28,13 @@ export const getRatedMovie = (page = 1) => {
     .catch(err => console.log(err));
 }
 
-export const getMovieById = (id) => {
+export const getMovieById = async(id) => {
 
   const url = `${API_HOST}/movie/${id}?api_key=${API_KEY}&language=es-ES`;
-    return fetch(url)
-      .then((response) => {
-        return response.json();
-      })
-      .then((result) => {
-        return result;
-      })
-      .catch(err => console.log(err));
+  const data = await fetch(url)
+  const response = await data.json()
+  return response
+  
 }
 
 export const getVideoById = (idmovie) => {
@@ -81,4 +77,13 @@ export const  getSimilarMovies = (idMovie) => {
     })
     .catch(err => console.log(err));
 
+}
+
+export const getCredits = async(id) => {
+
+  const url = `${API_HOST}/movie/${id}/credits?api_key=${API_KEY}&language=es-ES`;
+  const data = await fetch(url)
+  const response = await data.json()
+  return response
+  
 }

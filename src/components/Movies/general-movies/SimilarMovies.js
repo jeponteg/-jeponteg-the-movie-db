@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
 import { DetailsContext } from '../../../contexts/DetailsCardContext'
-import MoviesCard from '../MoviesCard'
 import Grid from '@material-ui/core/Grid'
+import SimilirMoviesCard from '../Similar-movies/SimilirMoviesCard'
 
 const SimilarMovies = () => {
 
@@ -17,7 +17,7 @@ const SimilarMovies = () => {
                     }= item;
                     return(
                         <Grid  item  xs={6} sm={4} md={2} key={id} >
-                            <MoviesCard 
+                            <SimilirMoviesCard
                                 idMovie={id} 
                                 title={title} 
                                 poster_path={poster_path}

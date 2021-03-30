@@ -5,8 +5,8 @@ import DetailsContext from "./contexts/DetailsCardContext";
 import Layout from "./components/layouts/Layout";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import { BrowserRouter as Router, Switch, Route, Redirect,useLocation } from "react-router-dom";
-import DetailsCard from "./components/Details-card/DetailsCard";
 import PageNotFound from "./components/Movies/NotFound/PageNotFound";
+import DetailsScreen from "./screens/DetailsScreen/DetailsScreen";
 
 const App = () => {
 
@@ -21,7 +21,7 @@ const App = () => {
                   <HomeScreen/>
                 </Route>
                 <Route exact path="/movie-details/:id">
-                  <DetailsCard/>
+                  <DetailsScreen/>
                 </Route> 
                 <Route component={PageNotFound} />
               </Switch>
