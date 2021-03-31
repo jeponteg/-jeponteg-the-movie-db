@@ -66,7 +66,7 @@ export const searchMovie = (search) => {
 
 export const  getSimilarMovies = (idMovie) => {
 
-  const url = `${API_HOST}/movie/${idMovie}/similar?api_key=${API_KEY}&language=es-ES`;
+  const url = `${API_HOST}/movie/${idMovie}/similar?api_key=${API_KEY}&language=es-EN`;
 
   return fetch(url)
     .then((response) => {

@@ -14,7 +14,6 @@ const App = () => {
   return (
     <Router>
       <PopularMovieContex>
-        <CreditsContext>
           <VideoContex>
             <DetailsContext>
               <Layout>
@@ -30,7 +29,6 @@ const App = () => {
               </Layout>
             </DetailsContext>
           </VideoContex>
-        </CreditsContext>
       </PopularMovieContex> 
     </Router>
   );
