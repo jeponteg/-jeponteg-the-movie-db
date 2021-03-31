@@ -7,29 +7,28 @@ import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import { BrowserRouter as Router, Switch, Route, Redirect,useLocation } from "react-router-dom";
 import PageNotFound from "./components/Movies/NotFound/PageNotFound";
 import DetailsScreen from "./screens/DetailsScreen/DetailsScreen";
-import CreditsContext from "./contexts/MovieCreditsContext";
 
 const App = () => {
 
   return (
     <Router>
       <PopularMovieContex>
-          <VideoContex>
-            <DetailsContext>
-              <Layout>
-                <Switch>
-                  <Route exact path='/'>
-                    <HomeScreen/>
-                  </Route>
-                  <Route exact path="/movie-details/:id">
-                    <DetailsScreen/>
-                  </Route> 
-                  <Route component={PageNotFound} />
-                </Switch>
-              </Layout>
-            </DetailsContext>
-          </VideoContex>
-      </PopularMovieContex> 
+        <VideoContex>
+          <DetailsContext>
+            <Layout>
+              <Switch>
+                <Route exact path='/'>
+                  <HomeScreen/>
+                </Route>
+                <Route exact path="/movie-details/:id">
+                  <DetailsScreen/>
+                </Route> 
+                <Route component={PageNotFound} />
+              </Switch>
+            </Layout>
+          </DetailsContext>
+        </VideoContex>
+    </PopularMovieContex> 
     </Router>
   );
 }
