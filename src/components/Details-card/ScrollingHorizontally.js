@@ -5,7 +5,6 @@ import { getCredits } from '../../api/movie-api'
 import { BASE_PATH_IMG } from '../../utils/constants'
 import CardMedia from '@material-ui/core/CardMedia';
 
-
 const ScrollingHorizontally = () => {
 
   const [credito, setCredito] = useState([])
