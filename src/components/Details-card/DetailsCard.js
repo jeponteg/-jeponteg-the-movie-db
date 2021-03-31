@@ -1,6 +1,5 @@
 import React,{useState, useEffect, useContext} from 'react'
 import { DetailsContext } from '../../contexts/DetailsCardContext';
-import { CreditsContext } from '../../contexts/MovieCreditsContext';
 import { getMovieById } from '../../api/movie-api';
 import { useParams } from "react-router-dom";
 import { BASE_PATH_IMG } from '../../utils/constants';
@@ -14,14 +13,12 @@ const DetailsCard = () => {
 
   let { id } = useParams();
   const { setId } = useContext(DetailsContext)
-  const { setIdmovie } = useContext(CreditsContext)
   const [ movie, setMovie ] = useState([])
  
   useEffect(() => {
     getMovieById(id).then((response) => {
       setMovie(response)
       setId(id)
-      setIdmovie(id)
     });  
   }, [id])
 
