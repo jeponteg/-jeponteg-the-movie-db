@@ -3,10 +3,10 @@ import Rating from '@material-ui/lab/Rating';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
-const MovieRating = ({voteAverage = 0}) => {
+const MovieRating = ({voteAverage = 0, voteCount = 0}) => {
   return(
     <Box component="fieldset" mb={3} borderColor="transparent">
-      <Typography component="legend">Controlled</Typography>
+      <Typography style={{color:'white'}}component="legend">Votos: {voteCount}</Typography>
       <Rating
         name="customized-10"
         max={10}
