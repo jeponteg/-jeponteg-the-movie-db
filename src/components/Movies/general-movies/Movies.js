@@ -20,6 +20,7 @@ const Movies = () => {
                 id,title,poster_path, release_date
                 }= item;
                 return(
+                    poster_path ?
                     <Grid  item  xs={6} sm={4} md={2} key={id} >
                         <MoviesCard 
                             idMovie={id} 
@@ -28,6 +29,7 @@ const Movies = () => {
                             release_date={release_date}
                         />
                     </Grid> 
+                    :null
                 )
             })  } 
         </Grid> 

@@ -24,7 +24,7 @@ const PopularMoviescCard = ({idMovie, poster_path}) => {
             <CardActionArea>
                 <CardMedia
                     className="card-media"
-                    image={imageUrl}
+                    image={imageUrl ? imageUrl : null}
                     title="img"
                 />
             </CardActionArea>
@@ -38,6 +38,7 @@ const PopularMoviescCard = ({idMovie, poster_path}) => {
                 </Button>
             </CardActions>
         </Card>
+      
     )
 }
 

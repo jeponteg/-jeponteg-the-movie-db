@@ -14,7 +14,7 @@ const DetailsCard = () => {
   let { id } = useParams();
   const { setId } = useContext(DetailsContext)
   const [ movie, setMovie ] = useState([])
- 
+  
   useEffect(() => {
     getMovieById(id).then((response) => {
       setMovie(response)
@@ -22,50 +22,57 @@ const DetailsCard = () => {
     });  
   }, [id])
 
-  const { title, release_date, overview, vote_average, genres, poster_path } = movie;
-  
-    let imageUrl2 =`${BASE_PATH_IMG}/w400${poster_path}`
-    let imageUrl  =`${BASE_PATH_IMG}/w1920_and_h800_multi_faces/${poster_path}`
-  
+  const { title, release_date, overview, vote_count, vote_average, genres, poster_path } = movie;
+ 
+  let imageUrl2 = "";
+  let imageUrl  = "";
+  if(poster_path){
+    imageUrl2 =`${BASE_PATH_IMG}/w400${poster_path}`
+    imageUrl  =`${BASE_PATH_IMG}/w1920_and_h800_multi_faces/${poster_path}`
+  }
+       
   return (
-    
-    <Card className="root-details" key={id}>
-      <CardMedia
-        className="card-media-details"
-        image={imageUrl}
-        title="img"
-      >
-        <div className="card-contents">
-          <Grid container spacing={1} >
-            <Grid  item  xs={12} sm={6} md={3}>
-              <CardMedia
-                className="card-media-img"
-                image={imageUrl2}
-                title="img"
-              /> 
-            </Grid>
+    imageUrl2 && imageUrl ?
+      <Card className="root-details" key={id}>
+        <CardMedia
+          className="card-media-details"
+          image={imageUrl}
+          title="img3"
+        >
+          <div className="card-contents">
+            <Grid container spacing={1} >
+              <Grid  item  xs={12} sm={6} md={3}>
+                <CardMedia
+                  className="card-media-img"
+                  image={imageUrl2}
+                  title="img2"
+                /> 
+              </Grid>
 
-            <Grid  item  xs={12} sm={6} md={9}>
-              <div className="card-details-text">
-                <div className="card-media-title"><h1>{title}: {release_date}</h1></div>
-                <div className="card-media-title"><h3>Género</h3></div>
-              <ul>
-                {genres && genres.map((item)=>{
-                 return(
-                  <li key={item.id} >{item.name}</li>
-                 )
-                })}
-              </ul>
-                <div className="card-media-title"></div>
-                <MovieRating voteAverage={vote_average} />
-                <div className="card-media-title"><h3>Vista general</h3></div>
-                <div className="card-media-overview">{overview}</div>
-              </div>                               
+              <Grid  item  xs={12} sm={6} md={9}>
+                <div className="card-details">
+                  <div className="card-details-content">
+                    <div className="card-media-title-principal">{title}: {release_date}</div>
+                    <div className="card-media-title-secundary"><h3>Género</h3></div>
+                    <ul>
+                      {genres && genres.map((item)=>{
+                      return(
+                        <li key={item.id} >{item.name}</li>
+                      )
+                      })}
+                    </ul>
+                    <div className="card-media-title-secundary"></div>
+                    <MovieRating voteAverage={vote_average} voteCount={vote_count}/>
+                    <div className="card-media-title-secundary"><h3>Vista general</h3></div>
+                    <div className="card-media-overview">{overview}</div>
+                  </div>
+                </div>                               
+              </Grid>
             </Grid>
-          </Grid>
-        </div>
-      </CardMedia>
-    </Card>
+          </div>
+        </CardMedia>
+      </Card>
+      :null
   )
 }
 

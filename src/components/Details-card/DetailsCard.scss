@@ -1,9 +1,13 @@
 .root-details{
     border-radius: 0px;
 }
-.card-media-details{
-    // height: 90vh;
-    // z-index: 1; 
+.card-details{
+   display: flex;
+   justify-content: center;
+   width: 100%;
+}
+.card-details-content{
+    width: 90%;
 }
 .card-contents{
     padding: 45px;
@@ -17,15 +21,26 @@
 .grid{
     background-color: transparent;
 }
-.card-media-title{
-    font-weight: 700;
+.card-media-title-principal{
     color: white;
-    margin: 30px;
+    font-weight: bold;
+    font-size: 55px;
+}
+.card-media-title-secundary{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
 }
 .card-media-overview{
     color: white;
     margin: 30px;
     text-align: justify;
+}
+ul{
+    margin:0;
+    padding:0;
+    margin-left: 18px;
+    margin-bottom: 20px;
 }
 li{
     color: white;
