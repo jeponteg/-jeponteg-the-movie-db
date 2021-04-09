@@ -25,7 +25,7 @@ export default function Footer() {
               />
             </a>
         
-            <a className="link" href="https://github.com/jeponteg" >
+            <a className="link" href="https://github.com/jeponteg/-jeponteg-the-movie-db" >
            
               <Icon path={mdiGithub}
                 title="User Profile"
