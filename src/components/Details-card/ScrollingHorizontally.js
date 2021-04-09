@@ -17,7 +17,7 @@ const ScrollingHorizontally = () => {
   },[id])
   
     return (
-        <div style={{ height: `22.7em` }}>
+        <div style={{ height: `18.7em` }}>
         <HorizontalScroll animValues = { 2 } config={{ stiffness: 160, damping: 110 }}>
           { credito ? 
             credito.map((item)=>{
@@ -26,7 +26,7 @@ const ScrollingHorizontally = () => {
                 let img =`${BASE_PATH_IMG}/w400${item.profile_path}`
                 return(
                   <CardMedia
-                    style={{width:200,height:300}}
+                    style={{width:200,height:300,marginRight:10}}
                     className="card-media-img"
                     image={img}
                     title="img"

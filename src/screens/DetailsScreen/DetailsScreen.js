@@ -8,7 +8,19 @@ const DetailsScreen = () => {
     return (
         <div className="details-screen">
             <DetailsCard/>
-            <ScrollingHorizontally/>
+            <div className="scrollingHorizontally">
+                <div className="text-main-cast">
+                   <h2>Reparto principal</h2> 
+                </div>
+                <div className="card-scrollingHorizontally">
+                    <ScrollingHorizontally/>
+                </div>
+            </div>
+           <div className="similar-movies">
+            <div className="text-similar-movies">
+                <h2>Peliculas similares</h2> 
+            </div>
+        </div> 
             <SimilarMovies/>
         </div>
     )

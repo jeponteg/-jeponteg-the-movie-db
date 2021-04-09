@@ -1,3 +1,29 @@
 .details-screen{
     background-color: black;
 }
+.scrollingHorizontally{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.card-scrollingHorizontally{
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+}
+.text-main-cast{
+    display: flex;
+    background-color:white;
+    color:black;
+    margin-left: 10px;
+}
+.text-similar-movies{
+    display: flex;
+    background-color:white;
+    margin-left: 10px;
+}
+.similar-movies{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
