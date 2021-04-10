@@ -1,6 +1,7 @@
 import React from 'react';
 import Pagination from '@material-ui/lab/Pagination';
 import { makeStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -12,7 +13,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const MoviePagination = ({setPage}) =>{
+const MoviePagination = ({ setPage }) =>{
   
   const classes = useStyles();
   
@@ -27,10 +28,13 @@ const MoviePagination = ({setPage}) =>{
         shape="rounded" 
         classes={{ ul: classes.paginationUL }} 
         count={100}  
-        onChange={handleChange} 
+        onChange={ handleChange } 
       />
     </div>
   );
 }
 export default MoviePagination
 
+MoviePagination.propTypes = {
+  setPage: PropTypes.func
+}
