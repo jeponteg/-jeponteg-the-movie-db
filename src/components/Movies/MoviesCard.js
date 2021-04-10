@@ -8,9 +8,10 @@ import CardActions from '@material-ui/core/CardActions'
 import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import VideocamIcon from '@material-ui/icons/Videocam'
+import PropTypes from 'prop-types';
 import './MoviesCard.styles.scss'
 
-const PopularMoviescCard = ({idMovie, poster_path}) => {
+const PopularMoviescCard = ({ idMovie, poster_path }) => {
     
     const{setId} = useContext(VideoContex)
     const imageUrl =`${BASE_PATH_IMG}/w400${poster_path}`
@@ -24,7 +25,7 @@ const PopularMoviescCard = ({idMovie, poster_path}) => {
             <CardActionArea>
                 <CardMedia
                     className="card-media"
-                    image={imageUrl ? imageUrl : null}
+                    image={ imageUrl ? imageUrl : null }
                     title="img"
                 />
             </CardActionArea>
@@ -38,8 +39,12 @@ const PopularMoviescCard = ({idMovie, poster_path}) => {
                 </Button>
             </CardActions>
         </Card>
-      
     )
 }
 
 export default PopularMoviescCard
+
+PopularMoviescCard.propTypes = {
+    idMovie: PropTypes.number,
+    poster_path: PropTypes.string
+}
