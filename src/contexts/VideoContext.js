@@ -2,7 +2,7 @@ import React,{useState, createContext, useEffect} from 'react'
 import { getVideoById } from '../api/movie-api';
 export const VideoContex = createContext();
 
-const VideoContext = ({children}) => {
+const VideoContext = ({ children }) => {
     
     const [isOpen, setOpen] = useState(false)
     const [video, setVideo] = useState([])
@@ -38,7 +38,7 @@ const VideoContext = ({children}) => {
                 setOpen
             }}
         >
-            {children}
+            { children }
         </VideoContex.Provider>
     )
 }

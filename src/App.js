@@ -16,19 +16,22 @@ const App = () => {
         <VideoContex>
           <DetailsContext>
             <Layout>
-              <Switch>
+
                 <Suspense fallback={
-                    <h1>Loading</h1>
-                  }>
-                  <Route exact path='/'>
-                    <HomeScreen/>
-                  </Route> 
-                  <Route exact path="/movie-details/:id">
-                    <DetailsScreen/>
-                  </Route>
-                </Suspense>   
-                <Route path=""component={PageNotFound} />
-              </Switch>
+                  <h1>Loading</h1>
+                }>
+                  <Switch>
+                    
+                      <Route exact path="/movie-details/:id">
+                        <DetailsScreen/>
+                      </Route>
+                      <Route exact path='/'>
+                        <HomeScreen/>
+                      </Route> 
+                      <Route path=""component={PageNotFound} />
+                    
+                  </Switch>
+              </Suspense>
             </Layout>
           </DetailsContext>
         </VideoContex>
