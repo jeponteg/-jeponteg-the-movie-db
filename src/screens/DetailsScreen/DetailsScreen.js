@@ -2,6 +2,7 @@ import React from 'react'
 import DetailsCard from '../../components/Details-card/DetailsCard'
 import ScrollingHorizontally from '../../components/Details-card/ScrollingHorizontally'
 import SimilarMovies from '../../components/Movies/general-movies/SimilarMovies'
+import ModalVideos from '../../components/Movies/ModalVideo'
 import './DetailsScreen.styles.scss'
 
 const DetailsScreen = () => {
@@ -22,6 +23,7 @@ const DetailsScreen = () => {
             </div>
             </div> 
             <SimilarMovies/>
+            <ModalVideos/>
         </div>
     )
 }
