@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import Logo from '../../assets/img/logo.svg';
+import SVGLogo from '../../assets/img/logo.svg';
 import '../../assets/styles/components/Header.scss';
 
 const useStyles = makeStyles((theme) => ({
@@ -30,7 +30,7 @@ export default function ButtonAppBar() {
             <figure className='header__logo'>
               <img 
                 className='header__logo-img'
-                src={Logo}
+                src={SVGLogo}
                 alt='logo'
             />
             </figure>

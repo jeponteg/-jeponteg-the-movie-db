@@ -72,7 +72,7 @@ const DetailsCard = () => {
           </div>
         </CardMedia>
       </Card>
-      :null
+    :null
   )
 }
 
