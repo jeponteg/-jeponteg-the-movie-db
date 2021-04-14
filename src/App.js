@@ -5,14 +5,14 @@ import DetailsContext from "./contexts/DetailsCardContext";
 import Layout from "./components/layouts/Layout";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import PageNotFound from "./components/Movies/NotFound/PageNotFound";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useHistory } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 const DetailsScreen =lazy(() => import ('./screens/DetailsScreen/DetailsScreen'));
 
 const App = () => {
 
   return (
-    <Router>
+    <Router history={useHistory}>
       <PopularMovieContex>
         <VideoContex>
           <DetailsContext>

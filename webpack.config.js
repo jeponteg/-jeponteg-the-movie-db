@@ -5,9 +5,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.join(__dirname, 'public'),
-        publicPath: '/movie-details',
         filename: 'bundle.js',
-        
     },
     module: {
         rules: [
@@ -58,4 +56,3 @@ module.exports = {
         contentBase: path.join(__dirname, 'public'),
     },
 };
-
