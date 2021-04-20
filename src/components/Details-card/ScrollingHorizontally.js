@@ -3,8 +3,8 @@ import HorizontalScroll from 'react-scroll-horizontal'
 import { DetailsContext } from '../../contexts/DetailsCardContext'
 import { getCredits } from '../../api/movie-api'
 import { BASE_PATH_IMG } from '../../utils/constants'
-import CardMedia from '@material-ui/core/CardMedia';
-
+import CardMedia from '@material-ui/core/CardMedia'
+import Reparto from '../../assets/img/reparto.jpg'
 const ScrollingHorizontally = () => {
 
   const [credito, setCredito] = useState([])
@@ -13,7 +13,7 @@ const ScrollingHorizontally = () => {
   useEffect(() =>{
     if(id){
       getCredits(id).then((response)=>{
-          setCredito(response.cast)
+        setCredito(response.cast)
       })
     }
   },[id])
@@ -22,21 +22,19 @@ const ScrollingHorizontally = () => {
     <div style={{ height: `18.7em` }}>
       { credito ?
         <HorizontalScroll animValues = { 2 } config={{ stiffness: 160, damping: 110 }}>
-          { credito ? 
+          { 
             credito.map((item)=>{
-              if(item.profile_path){
-                let img =`${BASE_PATH_IMG}/w400${item.profile_path}`
-                return(
-                  <CardMedia
-                    key={img}
-                    style={{width:200,height:300,marginRight:10}}
-                    className="card-media-img"
-                    image={img ? img : null}
-                    title="img"
-                  /> 
-                )
-              }
-            }): null
+              const img =`${BASE_PATH_IMG}/w400${item.profile_path}`
+              return(
+                <CardMedia
+                  key={img}
+                  style={{width:300,height:300,marginRight:10}}
+                  className="card-media-img"
+                  image={item.profile_path !== null ? img : Reparto }
+                  title="img"
+                /> 
+              )
+            })
           }
         </HorizontalScroll>
       : null }
