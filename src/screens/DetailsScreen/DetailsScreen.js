@@ -19,7 +19,7 @@ const DetailsScreen = () => {
             </div>
            <div className="similar-movies">
             <div className="text-similar-movies">
-                <h2>Peliculas similares</h2> 
+                <h2>Películas similares</h2> 
             </div>
             </div> 
             <SimilarMovies/>
