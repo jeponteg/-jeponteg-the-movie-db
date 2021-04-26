@@ -16,7 +16,7 @@ export default function Footer() {
             By Javier Ponte © 2021 
           </Typography>
 
-            <a className="link" href="https://www.linkedin.com/in/javier-ponte-gonz%C3%A1lez-67a6a7147/" >
+            <a className="link" href="https://www.linkedin.com/in/javier-ponte-gonz%C3%A1lez-67a6a7147/" target="_blank" >
             
               <Icon path={mdiLinkedin}
                 title="User Profile"
@@ -25,7 +25,7 @@ export default function Footer() {
               />
             </a>
         
-            <a className="link" href="https://github.com/jeponteg/-jeponteg-the-movie-db" >
+            <a className="link" href="https://github.com/jeponteg/-jeponteg-the-movie-db" target="_blank">
            
               <Icon path={mdiGithub}
                 title="User Profile"
