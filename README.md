@@ -1,15 +1,3 @@
-### App Web The Movie DB
-
-Este proyecto contiene:
-
-Consumo de la API de www.themoviedb.org con fetch.\
-Uso de Hooks, implementación de rutas con React Router Dom, lazy loading.\
-Implementación de página not found 404.\
-Uso de Prop-Types.\
-Empaquetado de recursos a producción con Webpack y Babel.\
-Despliegue en producción en Vercel.\
-HOC de ErrorBoundary.
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
