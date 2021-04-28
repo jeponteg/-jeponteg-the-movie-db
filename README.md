@@ -8,7 +8,7 @@ Implementación de página not found 404.\
 Uso de Prop-Types.\
 Empaquetado de recursos a producción con Webpack y Babel.\
 Despliegue en producción en Vercel.\
-HOC de ErrorBoundary.\
+HOC de ErrorBoundary.
 
 # Getting Started with Create React App
 
